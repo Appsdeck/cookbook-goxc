@@ -11,6 +11,7 @@ script "Install goxc" do
   interpreter "bash"
   user "root"
   group "root"
+  environment "GOPATH" => "/opt/go", "GOBIN" => "/opt/go/bin"
   path ["/opt/go/bin", "/bin", "/usr/bin"]
   code <<-eos
     go get github.com/laher/goxc    
